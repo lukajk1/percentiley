@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>percentiley</title>
+        <style>
+            body {
+                margin: 35px;
+                margin-top: 150px;
+            }
+
+            li {
+                margin: 3px 0;
+            }
+
+            #slider {
+                width: 50%;
+            }
+
+            #my-slider {
+                width: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="slider">
+            <center>
+                <h2 id="percentile-value"></h2>
+            </center>
+            <input type="range" id="my-slider" name="volume" min="1" max="100" value="50" />
+            <ul>
+                <li id="league"></li>
+                <li id="league-old"></li>
+                <li id="valorant"></li>
+                <li id="tft"></li>
+                <br />
+                <li id="sc2"></li>
+                <li id="ow"></li>
+                <li id="ow2"></li>
+                <li id="cs2"></li>
+                <li id="apex"></li>
+                <li id="chess"></li>
+                <br />
+                <li id="sat"></li>
+                <li id="iq"></li>
+                <li id="income"></li>
+            </ul>
+        </div>
+        <br />
+
+        <script src="maps.js"></script>
+        <script src="main.js"></script>
+
+        <h2>sources </h2>
+        <p>all retrieved feb. 2024 unless otherwise noted</p>
+        <ul>
+            <li><a href="https://www.leagueofgraphs.com/rankings/rank-distribution">https://www.leagueofgraphs.com/rankings/rank-distribution</a></li>
+            <li><a href="https://www.esportstales.com/league-of-legends/rank-distribution-percentage-of-players-by-tier">https://www.esportstales.com/league-of-legends/rank-distribution-percentage-of-players-by-tier</a></li>
+            <li><a href="https://www.esportstales.com/valorant/rank-distribution-and-percentage-of-players-by-tier">https://www.esportstales.com/valorant/rank-distribution-and-percentage-of-players-by-tier</a></li>
+            <li><a href="https://www.leagueofgraphs.com/tft/rank-distribution">https://www.leagueofgraphs.com/tft/rank-distribution</a></li>
+            <br />
+            <li><a href="https://starcraft.fandom.com/wiki/League_(StarCraft_II)">https://starcraft.fandom.com/wiki/League_(StarCraft_II)</a> </li>
+            <li><a href="https://us.forums.blizzard.com/en/overwatch/t/rank-distribution-ow1-vs-ow2/828683">https://us.forums.blizzard.com/en/overwatch/t/rank-distribution-ow1-vs-ow2/828683</a> </li>
+            <li><a href="https://www.dexerto.com/overwatch/overwatch-2-rank-distribution-how-good-are-you-in-competitive-2207081/">https://www.dexerto.com/overwatch/overwatch-2-rank-distribution-how-good-are-you-in-competitive-2207081/</a></li>
+            <li><a href="https://totalcsgo.com/ranks">https://totalcsgo.com/ranks</a></li>
+            <li><a href="https://dotesports.com/apex-legends/news/what-is-apex-legends-rank-distribution">https://dotesports.com/apex-legends/news/what-is-apex-legends-rank-distribution</a></li>
+            <li><a href="https://www.chess.com/leaderboard/live/rapid">https://www.chess.com/leaderboard/live/rapid</a></li>
+            <br />
+            <li><a href="https://research.collegeboard.org/reports/sat-suite/understanding-scores/sat">https://research.collegeboard.org/reports/sat-suite/understanding-scores/sat</a> </li>
+            <li><a href="https://www.omnicalculator.com/health/iq-percentile#iq-percentile-chart">https://www.omnicalculator.com/health/iq-percentile#iq-percentile-chart</a> retrieved dec. 2024 (questionable source)</li>
+            <li><a href="https://en.wikipedia.org/wiki/Personal_income_in_the_United_States#Distribution_of_personal_income_in_2022_according_to_US_Census_data">https://en.wikipedia.org/wiki/Personal_income_in_the_United_States#Distribution_of_personal_income_in_2022_according_to_US_Census_data</a></li>
+        </ul>
+    </body>
+</html>
