@@ -181,7 +181,7 @@ const sc2 = new Map([
     ["Master", 100],
     ["Grandmaster", 100]
 ]);
-
+/*
 const leagueOld = new Map([
     ["Iron IV", 0.45],
     ["Iron III", 1.38],
@@ -211,7 +211,7 @@ const leagueOld = new Map([
     ["Grandmaster", 99.06],
     ["Challenger", 99.08]
 ]);
-
+*/
 const ow = new Map([
     ["Bronze", 4],
     ["Silver", 25],
@@ -281,7 +281,7 @@ const chess = new Map([
     ["2100", 100.97],
     ["2200", 100.97]
 ]);
-
+/*
 const income = new Map([
     ["$1 - $2,499", 5.54],
     ["$2,500 - $4,999", 7.75],
@@ -328,7 +328,7 @@ const income = new Map([
     ["$200,000 - $249,999", 97.82],
     ["$250,000+", 100]
 ]);
-
+*/
 const cs2 = new Map([
     ["Silver I", 3.9],
     ["Silver II", 8.13],

@@ -1,82 +1,171 @@
-
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="comparison of competitive video game ranks by percentiles" />
         <meta name="author" content="Luka Kawashima" />
         <title>percentiley</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            
             body {
+                font-family: 'Inter', sans-serif;
                 margin: 35px;
-                margin-top: 150px;
+                margin-top: 75px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #f7f7f7;
             }
 
-            li {
-                margin: 3px 0;
+            h2 {
+                color: #2c3e50;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 1.5rem;
             }
 
-            #slider {
-                width: 50%;
+            #main-container {
+                width: 90%;
+                max-width: 600px;
+                background: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             }
 
-            /* https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+            #bell-curve-canvas {
+                width: 100%;
+                height: 200px;
+                display: block; /* Ensure it takes full width */
+                margin-bottom: 20px;
+            }
+            
+            /* Range Slider Styling */
             #my-slider {
                 width: 100%;
                 -webkit-appearance: none;
-                width: 100%;
-                height: 25px;
-                background: #d3d3d3;
+                appearance: none;
+                height: 10px;
+                background: #ecf0f1;
                 outline: none;
-                opacity: 0.7;
-                -webkit-transition: .2s;
+                opacity: 0.9;
+                border-radius: 5px;
                 transition: opacity .2s;
+                cursor: pointer;
             }
-
+            
             #my-slider::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 25px;
-                height: 25px;
-                background: #04AA6D;
+                width: 20px;
+                height: 20px;
+                background: #2980b9;
+                border: 2px solid white;
+                border-radius: 50%;
                 cursor: pointer;
+                box-shadow: 0 0 5px rgba(0,0,0,0.2);
             }
 
             #my-slider::-moz-range-thumb {
-                width: 25px;
-                height: 25px;
-                background: #04AA6D;
+                width: 20px;
+                height: 20px;
+                background: #2980b9;
+                border: 2px solid white;
+                border-radius: 50%;
                 cursor: pointer;
+                box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            }
+            
+            ul {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 10px;
+                margin-top: 30px;
+            }
+
+            li {
+                background: #ecf0f1;
+                padding: 10px 15px;
+                border-radius: 6px;
+                font-size: 14px;
+            }
+
+            li:nth-child(even) {
+                background: #e0e6e7;
+            }
+
+            li b {
+                font-weight: 700;
+                color: #2c3e50;
+            }
+
+            li i {
+                font-style: normal;
+                font-weight: 700;
+                color: #2980b9;
+            }
+            
+            li a {
+                color: #7f8c8d;
+                font-size: 0.8em;
+                margin-right: 5px;
+                text-decoration: none;
+            }
+            li a:hover {
+                text-decoration: underline;
+            }
+
+            p {
+                margin-top: 50px;
+                text-align: center;
+                font-size: 12px;
+                color: #7f8c8d;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 640px) {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+                #main-container {
+                    width: 95%;
+                    padding: 15px;
+                }
             }
 
         </style>
     </head>
 
     <body>
-        <div id="slider">
+        <div id="main-container">
             <center>
                 <h2 id="percentile-value"></h2>
             </center>
+            
+            <!-- Range Slider -->
             <input type="range" id="my-slider" min="1" max="100" value="50" />
+
             <ul>
                 <li id="league"></li>
-                <li id="league-old"></li>
+                <!--<li id="league-old"></li>-->
                 <li id="valorant"></li>
                 <li id="tft"></li>
-                <br />
                 <li id="sc2"></li>
                 <li id="ow"></li>
                 <li id="ow2"></li>
                 <li id="cs2"></li>
                 <li id="apex"></li>
                 <li id="chess"></li>
-                <br />
                 <li id="sat"></li>
                 <li id="iq"></li>
             </ul>
         </div>
 
-        <p>all data retrieved feb. 2024<br />created by <a href="https://lukajk.com/">lukajk</a></p>
+        <p>all data retrieved feb. 2024<br />created by <a href="https://github.com/lukajk1/percentiley">lukajk</a></p>
 
         <script src="maps.js"></script>
         <script src="main.js"></script>
