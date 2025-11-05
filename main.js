@@ -16,7 +16,6 @@ const maps = [
 
     { url: 'https://research.collegeboard.org/reports/sat-suite/understanding-scores/sat', element: document.getElementById('sat'), map: sat, label: 'SAT (nationally representative)' },
     { url: 'https://www.omnicalculator.com/health/iq-percentile#iq-percentile-chart', element: document.getElementById('iq'), map: iq, label: 'IQ' },
-    { url: 'https://en.wikipedia.org/wiki/Personal_income_in_the_United_States#Distribution_of_personal_income_in_2022_according_to_US_Census_data', element: document.getElementById('income'), map: income, label: '\'22 US Census income' }
 ];
 
 updatePercentiles();
@@ -27,7 +26,7 @@ function updatePercentiles() {
     sliderValue.textContent = `percentile: ${queryValue}`;
 
     maps.forEach(({ element, map, label, url }) => {
-        element.innerHTML = `<a href="${url}">(src)</a> ${label}: <i>${findPercentile(map, queryValue)}</i>`;
+        element.innerHTML = `<a href="${url}">(source)</a> ${label}: <i>${findPercentile(map, queryValue)}</i>`;
     });
 }
 
